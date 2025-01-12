@@ -1,0 +1,457 @@
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-image: url(../images/education.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #0c0015;
+    min-height: 100vh; /* Ensure the body fills the entire viewport height */
+    position: relative; /* Set body to relative positioning for absolute footer */
+  }
+  
+  header {
+    background-color: #34005b;
+    color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  .logo {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: -20px;
+  }
+  
+  .menuList {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .menuList li {
+    margin-right: 30px;
+  }
+  
+  .menuList a {
+    color: #f8f8f8;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  .menuIcon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  footer {
+    background-color: #34005b;
+    color: #f8f8f8;
+    padding: 10px 0;
+    text-align: left; /* Align footer text to the left */
+    display: flex;
+    justify-content: flex-start; /* Align footer items to the left */
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+  }
+  
+  .footerside {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footerside ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footerside ul li {
+    margin: 0 10px;
+  }
+  
+  .footerside a {
+    color: #f8f8f8;
+  }
+  table {
+    height: 250px;
+    font-size: 24px;
+  }
+  
+  table {
+    width: 95%;
+    margin: 10px;
+    border-collapse: collapse;
+    background-color: #fff; /* White background color */
+  
+  }
+  .left h2{
+    margin-top: 130px;
+    margin-bottom: 10px;
+  }
+  .right h2{
+    margin-top:100px ;
+  }
+  
+  th,
+  td {
+    border: 1px solid #000;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  td{
+  font-weight: bold;
+  }
+  audio {
+    width: 50%; /* Full width for audio controls */
+  }
+  
+  @media screen and (max-width: 567px) {
+    header .menuIcon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    header .menuIcon span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+  
+    header .menuIcon span:nth-child(1) {
+      transform-origin: top left;
+    }
+    header .menuIcon span:nth-child(3) {
+      transform-origin: top right;
+    }
+    header .menuIcon.active span:nth-child(1) {
+      transform: rotate(45deg) translate(16px, -2px);
+    }
+    header .menuIcon.active span:nth-child(2) {
+      opacity: 0;
+    }
+    header .menuIcon.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -3px);
+    }
+    .menuList {
+      display: none;
+    }
+  
+    .menuIcon {
+      display: block;
+    }
+  
+    .menuList.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 69px;
+      right: 0;
+      width: 50%;
+      background-color: #34005bdc;
+      padding: 10px 0;
+      font-size: 11px;
+    }
+  
+    .menuList.active li {
+      text-align: center;
+      margin: 15px 0; /* Increase margin for spacing between items */
+    }
+  
+    nav {
+      height: 69px;
+    }
+    .logo {
+      font-size: 20px;
+      margin-left: -20px;
+      font-weight: bold;
+    }
+    p {
+      padding-bottom: 35px;
+      font-size: 12px;
+    }
+    li {
+      font-size: 11px;
+    }
+    .right li{
+      font-size: 12px;
+    }
+    td,
+    th {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 100px;
+      text-align: center;
+    }
+    .left {
+      margin-bottom: -90px;
+    }
+    ol {
+      margin-left: 20px;
+    }
+    audio {
+      margin-bottom: 80px;
+      height: 32px;
+      width: 190px;
+      margin-left: 40px;
+      margin-top: -10px;
+    }
+    footer p {
+      padding-bottom: 24px;
+    }
+    .footerside {
+      margin-left: 40px;
+    }
+    .footerside ul {
+      flex-direction: row; /* Change to row for small screens */
+      margin-left: 10px; /* Add margin to separate from the text */
+      display: block;
+    }
+  
+    .tablecontent {
+      flex-direction: column; /* Stack items on smaller screens */
+    }
+  }
+  
+  @media (min-width: 568px) and (max-width: 1279px) {
+    .menuList {
+      font-size: 20px;
+    }
+    header {
+      height: 140px;
+    }
+    nav {
+      margin-top: 40px;
+    }
+    p {
+      font-size: 24px;
+    }
+    li {
+      font-size: 20px;
+    }
+    .logo {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 40px;
+     
+    }
+    .left h2{
+      margin-top: 300px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .right{
+     margin-top: -50px;
+     margin-left: 100px;
+    }
+    .right ol{
+      margin-bottom: 10px;
+    }
+    audio{
+      width: 379px;
+      height: 56px;
+    }
+    table {
+      width: 800px;
+      align-items: center;
+    }
+    ol {
+      margin-bottom: 240px;
+    }
+    footer li {
+      font-size: 20px;
+    }
+    footer {
+      height: 140px;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 900px) {
+      
+    header .menuIcon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    header .menuIcon span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+  
+    header .menuIcon span:nth-child(1) {
+      transform-origin: top left;
+    }
+    header .menuIcon span:nth-child(3) {
+      transform-origin: top right;
+    }
+    header .menuIcon.active span:nth-child(1) {
+      transform:rotate(45deg) translate(16px, -2px);
+    }
+    header .menuIcon.active span:nth-child(2) {
+      opacity: 0;
+    }
+    header .menuIcon.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -3px);
+    }
+    .HomeBody {
+      flex-direction: column;
+    }
+    .menuList {
+      display: none;
+    }
+  
+    .menuIcon {
+      display: block;
+    }
+  
+    .menuList.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 69px;
+      right: 0;
+      width: 25%;
+      background-color: #34005bce;
+    }
+  
+    .menuList.active li {
+      text-align: center;
+      margin: 10px 0;
+    }
+    header{
+        height: 140px;}
+    .logo {
+        font-weight: bold;
+        font-size: 40px;
+         margin-right: 550px;
+         
+          }
+     footer {
+            height: 140px;
+          }
+          h1 {
+            margin-top: 130px;
+            font-size: 40px;
+            text-align: center;
+          }
+    p {
+            font-size: 24px;
+          }
+     section p{
+            margin-bottom: 100px;
+          }
+     nav {
+            font-size: 140px;
+          }
+    li {
+            font-size: 20px;
+          }
+  }
+  @media screen and (min-width: 1280px) {
+    header{
+      height: 140px;
+      
+    }
+    .tablecontent {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      margin-top: 160px;
+    }
+  
+    .left {
+      flex: 1;
+      margin-right: 20px;
+      margin-left: 40px;
+      margin-top: -30px;
+    }
+  h2{
+  font-size: 48px;
+  }
+  table{
+  height: 400px;
+  width: 800px;
+  }
+  th{
+  padding: 15px;
+  font-weight: bold;
+  }
+  td, th{
+  font-size: 32px;
+  }
+  nav{
+  margin-top: 20px;
+  }
+    .right {
+      flex: 1;
+      margin-top: 8px;
+    }
+    .right li{
+      font-size: 32px;
+    }
+    .logo {
+      font-size: 48px;
+      margin-left: 10px;
+    }
+    .menuList {
+      font-size: 32px;
+    }
+    p {
+      font-size: 32px;
+      margin-left: 20px;
+    }
+    audio{
+      width: 353px;
+      height: 59px;
+    }
+    li {
+      font-size: 24px;
+    }
+  }
+  

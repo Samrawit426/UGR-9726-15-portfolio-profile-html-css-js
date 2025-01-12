@@ -1,0 +1,445 @@
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif; /* Updated font family */
+    background-color: #f6eaff;
+    color: #0c0015;
+    min-height: 100vh; /* Ensure the body fills the entire viewport height */
+    position: relative; /* Set body to relative positioning */
+    padding-top: 70px; /* Space for fixed header */
+    padding-bottom: 80px; /* Space for fixed footer */
+  }
+  
+  header {
+    background-color: #34005b;
+    color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Stretch to the left */
+    z-index: 1000; /* Make sure it stays above other content */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .menuList {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .menuList li {
+    margin-right: 20px;
+  }
+  
+  .menuList a {
+    color: #f8f8f8;
+    font-size: 1em;
+    text-decoration: none;
+  }
+  
+  .menuIcon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #34005b;
+    color: #f8f8f8;
+    padding: 10px 0;
+    text-align: left; /* Align footer text to the left */
+    display: flex;
+    justify-content: flex-start; /* Align footer items to the left */
+    align-items: center;
+    width: 100%;
+    position: fixed; /* Fix the footer at the bottom */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Stretch to the left */
+    z-index: 1000; /* Make sure it stays above other content */
+  }
+  
+  .footerside {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footerside ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footerside ul li {
+    margin: 0 10px;
+  }
+  
+  .footerside a {
+    color: #f8f8f8;
+  }
+  .footerside p{
+  font-weight: bold;
+  }
+  section {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+  }
+  
+  .sideimage {
+    justify-content: center;
+    flex: 0 0 auto; /* Prevent the image container from shrinking */
+    height: auto; /* Allow height to be determined by content */
+  }
+  
+  .sideimage img {
+    width: 200px; /* Let the width adjust */
+    height: auto; /* Adjust height based on content */
+    display: block; /* Remove bottom space caused by inline elements */
+    margin-top: 20px;
+  }
+  
+  .sidetext {
+    flex: 1;
+  }
+  
+  h2 {
+    margin-left: 80px;
+  }
+  
+  .skills {
+    padding: 0;
+    margin-left: 60px;
+  }
+  
+  @media screen and (max-width: 567px) {
+    header .menuIcon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    header .menuIcon span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+  
+    header .menuIcon span:nth-child(1) {
+      transform-origin: top left;
+    }
+    header .menuIcon span:nth-child(3) {
+      transform-origin: top right;
+    }
+    header .menuIcon.active span:nth-child(1) {
+      transform: rotate(45deg) translate(16px, -2px);
+    }
+    header .menuIcon.active span:nth-child(2) {
+      opacity: 0;
+    }
+    header .menuIcon.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -3px);
+    }
+   .menuList {
+      display: none;
+    } 
+  
+    .menuIcon {
+      display: block;
+    }
+  
+    .menuList.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 69px;
+      right: 0;
+      width: 50%;
+      background-color: #34005bdc;
+      padding: 10px 0;
+      font-size: 11px;
+    }
+  
+    .menuList.active li {
+      text-align: center;
+      margin: 15px 0; /* Increase margin for spacing between items */
+    }
+  
+    .logo {
+      font-size: 20px;
+      margin-left: -20px;
+      font-weight: bold;
+    }
+  
+    li {
+      font-size: 11px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    nav {
+      height: 69px;
+    }
+  
+    p {
+      padding-bottom: 25px;
+      font-size: 12px;
+    }
+  
+    .footerside ul {
+      flex-direction: row; /* Change to row for small screens */
+      margin-left: 10px; /* Add margin to separate from the text */
+      display: block;
+    }
+  
+    section {
+      flex-direction: column; /* Stack elements on small screens */
+      padding: 10px;
+    }
+  
+    .sideimage {
+      margin: 10px 50px; /* Center with left and right margins */
+      width: calc(100% - 100px); /* Full width minus margins */
+      height: auto; /* Allow height to adjust */
+    }
+  
+    footer {
+      height: 62px;
+    }
+    .footerside{
+      margin-left: 40px;
+    }
+  }
+  
+  @media (min-width: 568px) and (max-width: 1279px) {
+    header {
+      height: 140px;
+    }
+    nav {
+      margin-top: 40px;
+    }
+    section {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center align items */
+      padding: 10px; /* Adjust padding */
+    }
+    .logo {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 40px;
+      margin-left: 140px;
+      margin-top: -5px;
+    }
+    .sideimage img {
+      width: 500px;
+      margin-top: 220px;
+    }
+    .sideimage {
+      margin: 10px 50px; /* Center with left and right margins */
+      width: calc(100% - 100px); /* Full width minus margins */
+      height: auto; /* Allow height to adjust */
+      display: flex; /* Allow flex layout for sideimage */
+      justify-content: center; /* Center image */
+    }
+    .skills {
+      margin-left: 100px;
+    }
+  
+    .sidetext {
+      margin: 10px 50px; /* Add margin for spacing */
+    }
+  
+    .menuList {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 24px;
+    }
+  
+    li {
+      font-size: 24px;
+    }
+    section ul{
+      margin-bottom: 150px;
+    }
+    
+    footer li {
+      font-size: 20px;
+    }
+    footer {
+      height: 140px;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 900px) {
+      
+    header .menuIcon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    header .menuIcon span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+  
+    header .menuIcon span:nth-child(1) {
+      transform-origin: top left;
+    }
+    header .menuIcon span:nth-child(3) {
+      transform-origin: top right;
+    }
+    header .menuIcon.active span:nth-child(1) {
+      transform:rotate(45deg) translate(16px, -2px);
+    }
+    header .menuIcon.active span:nth-child(2) {
+      opacity: 0;
+    }
+    header .menuIcon.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -3px);
+    }
+    .HomeBody {
+      flex-direction: column;
+    }
+    .menuList {
+      display: none;
+    }
+  
+    .menuIcon {
+      display: block;
+    }
+  
+    .menuList.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 69px;
+      right: 0;
+      width: 25%;
+      background-color: #34005bce;
+    }
+  
+    .menuList.active li {
+      text-align: center;
+      margin: 10px 0;
+    }
+    header{
+        height: 140px;}
+    .logo {
+        font-weight: bold;
+        font-size: 40px;
+         margin-right: 550px;
+         
+          }
+     footer {
+            height: 140px;
+          }
+          h1 {
+            margin-top: 130px;
+            font-size: 40px;
+            text-align: center;
+          }
+    p {
+            font-size: 24px;
+          }
+     section p{
+            margin-bottom: 100px;
+          }
+     nav {
+            font-size: 140px;
+          }
+    li {
+            font-size: 20px;
+          }
+  }
+  @media screen and (min-width: 1280px) {
+    header {
+      height: 140px;
+    }
+    .logo {
+      font-size: 48px;
+    }
+  
+    section {
+      justify-content: flex-start; /* Align items to the left */
+    }
+  
+    .sideimage {
+      margin: 0; /* No margins for larger screens */
+      height: 600px; /* Allow height to be determined by content */
+      margin: 100px 70px 100px 50px;
+    }
+  
+    .sideimage img {
+      height: 100%; /* Set height to match text */
+      max-height: 100%; /* Prevent overflow */
+      width: 600px; /* Maintain aspect ratio */
+      margin: px 0 100px 20px;
+    }
+  
+    .logo {
+      font-size: 48px;
+    }
+  
+    .menuList {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 48px;
+      margin-left: 8px;
+    }
+    p {
+      font-size: 32px;
+    }
+    .skills {
+      margin-left: 30px;
+    }
+    li {
+      font-size: 32px;
+      margin-right: -10px;
+    }
+    footer li {
+      font-size: 24px;
+    }
+    footer {
+      height: 140px;
+    }
+  }
+  
